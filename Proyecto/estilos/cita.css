@@ -4,3 +4,6 @@
     padding-bottom: 2em;
 }
 #success_message{ display: none;}
+#logo{
+    background-color: white;
+}
