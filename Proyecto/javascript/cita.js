@@ -1,112 +1,81 @@
-$(document).ready(function() {
-    $('#contact_form').bootstrapValidator({
-        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
-        feedbackIcons: {
-            valid: 'glyphicon glyphicon-ok',
-            invalid: 'glyphicon glyphicon-remove',
-            validating: 'glyphicon glyphicon-refresh'
-        },
-        fields: {
-            nombre: {
-                validators: {
-                        stringLength: {
-                        min: 2,
-                    },
-                        notEmpty: {
-                        message: 'Por favor, ponga su nombre'
-                    }
-                }
-            },
-             apellidos: {
-                validators: {
-                     stringLength: {
-                        min: 2,
-                    },
-                    notEmpty: {
-                        message: 'Por favor,ponga sus apellidos'
-                    }
-                }
-            },
-            email: {
-                validators: {
-                    notEmpty: {
-                        message: 'Por favor,introduzca su correo electrónico'
-                    },
-                    emailAddress: {
-                        message: 'Introduzca una dirección de correo válida'
-                    }
-                }
-            },
-            telefono: {
-                validators: {
-                    notEmpty: {
-                        message: 'Por favor,ponga su número'
-                    },
-                    phone: {
-                        country: 'ES',
-                        message: 'Ponga un teléfono con un prefijo válido'
-                    }
-                }
-            },
-            direccion: {
-                validators: {
-                     stringLength: {
-                        min: 8,
-                    },
-                    notEmpty: {
-                        message: 'Por favor,introduzca su dirección'
-                    }
-                }
-            },
-            servicio: {
-                validators: {
-                    notEmpty: {
-                        message: 'Por favor,seleccione el servicio que busque'
-                    }
-                }
-            },
-            postal: {
-                validators: {
-                    notEmpty: {
-                        message: 'Por favor,ponga su código postal'
-                    },
-                    zipCode: {
-                        country: 'ES',
-                        message: 'Ponga un código válido'
-                    }
-                }
-            },
-            comment: {
-                validators: {
-                      stringLength: {
-                        min: 10,
-                        max: 200,
-                        message:'Please enter at least 10 characters and no more than 200'
-                    },
-                    notEmpty: {
-                        message: 'Please supply a description of your project'
-                    }
-                    }
-                }
-            }
-        })
-        .on('success.form.bv', function(e) {
-            $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
-                $('#contact_form').data('bootstrapValidator').resetForm();
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("formulario").addEventListener('submit', validarFormulario); 
+  });
+  //Función para comprobar el mail
+  function pruebaemail (valor){
+    re=/^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+    if(!re.exec(valor)){
+        return false;
+    }
+    else return true;
+    }
+  //Validación del formulario
+  function validarFormulario(evento) {
+    evento.preventDefault();
+    //Nombre
+    var usuario = document.getElementById('nombre').value;
+    if(usuario.length == 0) {
+      alert('No has escrito nada en el nombre');
+      return;
+    }
+    //Apellidos
+    var apellidos = document.getElementById('apellidos').value;
+    if(apellidos.length == 0) {
+      alert('No has escrito nada en los apellidos');
+      return;
+    }
+    //mail
+    var mail = document.getElementById('email').value;
+     if (pruebaemail(mail)==false || mail.length == 0)
+     {
+        alert('Mail no válido/no has escrito nada');
+        return;
+     }
+     //teléfono
+     var telefono = document.getElementById('telefono').value;
+    if(telefono.length == 0 || telefono.length >9 || telefono.length < 9) {
+      alert('No has escrito nada en el teléfono/Teléfono no válido');
+      return;
+    }
+    //Dirección
+    var direccion = document.getElementById('direccion').value;
+    if(direccion.length == 0) {
+      alert('No has escrito nada en la dirección');
+      return;
+    }
+    //Servicio
+    var servicio = document.getElementById('servicio').selectedIndex;
+    if(servicio ==null || servicio==0)
+    {
+      alert('TIenes que elegir el servicio que necesites.');
+      return;
+    }
+    //Codigo Postal
+    var cp= document.getElementById('postal').value;
+    if (cp.length==0 || cp== null|| cp.length<5 ||cp.length>5)
+    {
+      alert('Pon un Código Postal válido');
+      return;
+    }
+    //Urgencias
+    var urge=document.getElementsByName('urge');
+    var seleccionado = false;
+    for(var i=0; i<urge.length;i++)
+    {
+      if(urge[i].checked){
+        seleccionado = true;
+        break;
+      }
+    }
+    if(!seleccionado)
+    {
+      alert('Por favor,indique la urgencia')
+      return
+    }
 
-            // Prevent form submission
-            e.preventDefault();
 
-            // Get the form instance
-            var $form = $(e.target);
 
-            // Get the BootstrapValidator instance
-            var bv = $form.data('bootstrapValidator');
 
-            // Use Ajax to submit form data
-            $.post($form.attr('action'), $form.serialize(), function(result) {
-                console.log(result);
-            }, 'json');
-        });
-});
-
+    alert("Cita pedida con éxito, le llamaremos para confirmar fecha y hora.")
+    document.getElementById('mandado').innerHTML='Cita pedida con éxito!';
+  }

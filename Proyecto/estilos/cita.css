@@ -7,3 +7,10 @@
 #logo{
     background-color: white;
 }
+#oblig{
+    color: red;
+    font-size: 20px;
+}
+#aviso{
+    font-size: 0.75em;
+}

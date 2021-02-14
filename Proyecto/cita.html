@@ -6,7 +6,7 @@
     <title>Pide cita aquí</title>
     <link rel="stylesheet" href="estilos/cita.css">
     <!--Validación formulario-->
-    <script src="javascript/nueva.js"></script>
+    <script src="javascript/cita.js"></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -54,12 +54,12 @@
     <fieldset>
     
     <!-- Nombre formulario -->
-    <legend>Pide cita Ya</legend>
+    <legend>Pide Cita Ya <span id="aviso">(Los campos con <span id=oblig>*</span> son obligatorios)</span></legend>
     
     <!-- Text input-->
     
     <div class="form-group">
-      <label class="col-md-4 control-label">Nombre</label>  
+      <label class="col-md-4 control-label">Nombre<span id="oblig">*</span></label>  
       <div class="col-md-4 inputGroupContainer">
       <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -71,7 +71,7 @@
     <!-- Text input-->
     
     <div class="form-group">
-      <label class="col-md-4 control-label" >Apellidos</label> 
+      <label class="col-md-4 control-label" >Apellidos<span id="oblig">*</span></label> 
         <div class="col-md-4 inputGroupContainer">
         <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -82,7 +82,7 @@
     
     <!-- Text input-->
            <div class="form-group">
-      <label class="col-md-4 control-label">E-Mail</label>  
+      <label class="col-md-4 control-label">E-Mail<span id="oblig">*</span></label>  
         <div class="col-md-4 inputGroupContainer">
         <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
@@ -95,7 +95,7 @@
     <!-- Text input-->
            
     <div class="form-group">
-      <label class="col-md-4 control-label">Teléfono</label>  
+      <label class="col-md-4 control-label">Teléfono<span id="oblig">*</span></label>  
         <div class="col-md-4 inputGroupContainer">
         <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
@@ -107,7 +107,7 @@
     <!-- Text input-->
           
     <div class="form-group">
-      <label class="col-md-4 control-label">Dirección</label>  
+      <label class="col-md-4 control-label">Dirección<span id="oblig">*</span></label>  
         <div class="col-md-4 inputGroupContainer">
         <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
@@ -118,11 +118,11 @@
     <!-- Select Basic -->
        
     <div class="form-group"> 
-      <label class="col-md-4 control-label">State</label>
+      <label class="col-md-4 control-label">Servicios<span id="oblig">*</span></label>
         <div class="col-md-4 selectContainer">
         <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-        <select name="state" class="form-control selectpicker" >
+        <select id="servicio" class="form-control selectpicker" >
           <option value=" " >Por favor,elija el servicio</option>
           <optgroup label="Odontología conservadora">
             <option>Obturaciones</option>
@@ -155,38 +155,26 @@
     <!-- Text input-->
     
     <div class="form-group">
-      <label class="col-md-4 control-label">Código postal</label>  
+      <label class="col-md-4 control-label">Código postal<span id="oblig">*</span></label>  
         <div class="col-md-4 inputGroupContainer">
         <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-      <input name="postal" placeholder="Código postal" class="form-control"  type="text">
+      <input id="postal" placeholder="Código postal" class="form-control"  type="text">
         </div>
     </div>
     </div>
-    
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label">Website or domain name</label>  
-       <div class="col-md-4 inputGroupContainer">
-        <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
-      <input name="website" placeholder="Website or domain name" class="form-control" type="text">
-        </div>
-      </div>
-    </div>
-    
     <!-- radio checks -->
      <div class="form-group">
-                            <label class="col-md-4 control-label">Do you have hosting?</label>
+                            <label class="col-md-4 control-label">¿Es una cita de urgencias?<span id="oblig">*</span></label>
                             <div class="col-md-4">
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="hosting" value="yes" /> Yes
+                                        <input type="radio" name="urge" value="yes" /> Sí
                                     </label>
                                 </div>
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="hosting" value="no" /> No
+                                        <input type="radio" name="urge" value="no" /> No
                                     </label>
                                 </div>
                             </div>
@@ -195,11 +183,11 @@
     <!-- Text area -->
       
     <div class="form-group">
-      <label class="col-md-4 control-label">Project Description</label>
+      <label class="col-md-4 control-label">¿Algo que debamos tener en cuenta?</label>
         <div class="col-md-4 inputGroupContainer">
         <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                <textarea class="form-control" name="comment" placeholder="Project Description"></textarea>
+                <textarea class="form-control" name="comment" placeholder="Escriba aquí cualquier cosa"></textarea>
       </div>
       </div>
     </div>
