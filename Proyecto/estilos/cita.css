@@ -14,3 +14,30 @@
 #aviso{
     font-size: 0.75em;
 }
+@media only screen and (max-width: 600px)
+{
+    #logo
+  {
+    width: 141px;
+    height: 50px;
+  }
+    #foto{
+        display: none;
+    }
+}
+@media only screen and (orientation:landscape)
+{
+    #foto{
+        width: 100%;
+        height: auto;
+        padding-left: 2em;
+    }
+}
+@media only screen and (min-width: 600px)
+{
+    #foto{
+        width: 100%;
+        height: auto;
+        padding-left: 2em;
+    }
+}
