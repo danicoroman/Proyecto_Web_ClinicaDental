@@ -192,14 +192,19 @@
       </div>
     </div>
     
-    <!-- Success message -->
-    <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+    <!-- PROTECCIÓN DE DATOS -->
+    <div class="form-check" id='polit'>
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+      <label class="col-md-4 control-label">Acepto la <a title="Consulta política protección datos aepd" target=".blank" href="https://www.aepd.es/es/politica-de-privacidad-y-aviso-legal"> política de protección de datos</a></label>
+
+    </div>
     
     <!-- Button -->
     <div class="form-group">
       <label class="col-md-4 control-label"></label>
       <div class="col-md-4">
-        <button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
+        <button type="submit" class="btn btn-warning" id="enviar">Pedir cita <span class="glyphicon glyphicon-send"></span></button>
+        <button type="reset" class="btn btn-warning" id="reset">Limpia el formulario<span class="glyphicon glyphicon-send"></span></button>
       </div>
     </div>
     <span id="mandado"></span>

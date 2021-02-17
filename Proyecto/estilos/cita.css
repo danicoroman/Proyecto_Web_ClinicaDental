@@ -3,6 +3,9 @@
     height: 500px;
     padding-bottom: 2em;
 }
+#polit{
+    padding-bottom: 3em;
+}
 #success_message{ display: none;}
 #logo{
     background-color: white;
