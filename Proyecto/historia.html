@@ -1,11 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre nosotros</title>
+    <link rel="stylesheet" href="estilos/historia.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="about-us.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
+<!-- NAVBAR
+================================================== -->
 <body>
-    
+    <header>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <img src="imagenes/logo.png" alt="Logo empresa" id="logo">
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="cita.html">Pida cita ya</a></li>
+                <li class="active"><a href="#">Sobre nosotros</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+  </header>
+  <!--Contenedor principal-->
+  <div class="container">
+    <div class="ct-pageWrapper" id="ct-js-wrapper">
+        <section class="story-section ct-u-paddingBoth100 paddingBothHalf noTopMobilePadding" id="section">
+          <div class="container text-center">
+            <img src="imagenes/aboutus.jpg" alt="imagen" id="aboutus">
+            <h1>Conoce nuestra clínica</h1>
+            <div class="red-border"></div>
+            <h3><b> La clínica dental <a href="home.html" style="font-style: italic; color: black;"> DentalBrigde </a> en Jerez de la Frontera es uno de los mayores centros de toda la provincia.</b></h3>
+            <div class="col-md-8 col-md-offset-2">
+              <div class="red-border"></div>
+              <p class="ct-u-size22 ct-u-fontWeight300 marginTop40">Disponemos de una superficie de más de 200 m², con 4 gabinetes dentales, 1 quirófano principal con anestesia general, un departamento de imagen radiológica, dos salas de espera, un departamento informático de contabilidad, un departamento de gestión y de recursos humanos y una biblioteca. También tenemos un departamento de investigación clínica. Consideramos que la investigación clínica es muy importante y por ello nos anticipamos a muchas de las nuevas técnicas que van apareciendo en el mercado.</p>
+              <!-- <a class="ct-u-marginTop60 btn btn-solodev-red btn-fullWidth-sm ct-u-size19" href="#">Learn More</a> -->
+            </div>
+          </div>
+        </section>
+        <section class="culture-section company-sections ct-u-paddingBoth100 paddingBothHalf noTopMobilePadding">
+          <div class="container" id="servi">
+            <div class="row">
+              <div class="col-md-6 col-md-offset-2">
+                <h2>Nuestro servicio es integral</h2>
+                <div class="col-xs-11"><h3>Abarca toda la gama de especialidades odontológicas en una clínica:</h3></div>
+              </div>
+            </div>
+            <div class="row ct-u-paddingBoth20">
+              <div class="col-xs-3 col-md-4">
+                <div>
+                    <img src="imagenes/cirugia.jpg" alt="cirugia" height="200px" width="200px">
+                  <h4>Cirugía e implantología</h4>
+                  <p>Rehabilitamos toda la boca de dientes artificiales en 24 horas.</p>
+                </div>
+              </div>
+              <div class="col-xs-3 col-md-4">
+                <div>
+                  <img src="imagenes/orto.jpg" alt="ortodoncia" height="200px" width="200px">
+                  <h4>Ortodoncia</h4>
+                  <p>Brackets, ortodoncia invisible y brackets removibles.</p>
+                </div>
+              </div>
+              <div class="col-xs-4 col-md-4">
+                <div>
+                <img src="imagenes/prote.jpg" alt="protesis" height="200px" width="200px">
+                  <h4>Protesis</h4>
+                  <p style="padding-right: 3em;">Tratamiento de la falta de dientes</p>
+                </div>
+              </div>
+            </div>
+            <div class="row ct-u-paddingBoth20">
+              <div class="col-xs-3 col-md-4">
+                <div>
+                  <img src="imagenes/odonto.jpg" alt="Odontopediatría" height="200px" width="200px">
+                  <h4>Odontopediatría</h4>
+                  <p>Odontología aplicada a los niños.</p>
+                </div>
+              </div>
+              <div class="col-xs-3 col-md-4">
+                <div>
+                  <img src="imagenes/estetica.jpg" alt="estetica" height="200px" width="200px">
+                  <h4>Estética dental</h4>
+                  <p>Mejoramos tu sonrisa</p>
+                </div>
+              </div>
+              <div class="col-xs-4 col-md-4">
+                <div>
+                  <img src="imagenes/atm.jpg" alt="ATM" height="200px" width="200px">
+                  <p>ATM</p>
+                  <p>Mejoramos tus problemas de la articulación de la mandíbula.</p>
+                </div>
+            </div>
+              </div>
+            </div>
+            <a class="ct-u-marginTop60 btn btn-solodev-red-reversed btn-fullWidth-sm ct-u-size19" href="cita.html">Pide cita YA</a>
+          </div>
+        </section>
+        <section class="customers-section company-sections ct-u-paddingBoth100 paddingBothHalf noTopMobilePadding">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2">
+                <h2>Nuestros profesionales</h2>
+                <h3>Conoce parte de nuestro equipo</h3>
+                <div class="col-md-4">
+                <img src="imagenes/ramon.jpg" alt="director">
+                <h3>Ramón</h3>
+                <h4>Director general</h4>
+            </div>
+            <div class="col-md-4">
+                <img src="imagenes/eli.jpg" alt="elisa">
+                <h3>Elisabeth</h3>
+                <h4>Doctora</h4>
+            </div>
+            <div class="col-md-4"> 
+                <img src="imagenes/laia.jpg" alt="laia">
+                <h3>Laia</h3>
+                <h4>Recepcionista</h4>
+            </div>
+              </div>
+              <div class="clearfix">
+            </div>
+          </div>
+        </section>
+      </div>
+      
+ <!--FOOTER-->
+ <footer>
+    <h3>Contacto</h3>
+    <br>
+    <h4>Síguenos en nuestras redes sociales</h4>
+   <a href="https://facebook.com" target=".black"> <img src="imagenes/facebook.png" title="A facebook" id="face" alt="facebook" width="50" height="50"></a>
+   <a href="https://twitter.com" target=".black"> <img src="imagenes/twitter.png" title="A twitter" id="twit" alt="twitter" width="50" height="50"></a>
+   <a href="https://instagram.com" target=".black"><img src="imagenes/instagram.png" id="insta" title="A instagram" alt="instagram" width="50" height="50"></a>
+    <p class="pull-right arriba"><a href="#">Volver al Inicio</a></p>
+    <p>© 2021 Serviweb, S.L. · <a href="#">Privacidad</a> · <a href="#">Términos y Condiciones</a></p>
+  </footer>
+  </div>
+      <!-- /.container -->
+  
 </body>
 </html>
