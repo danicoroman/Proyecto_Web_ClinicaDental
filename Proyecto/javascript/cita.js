@@ -76,6 +76,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-    alert("Cita pedida con éxito, le llamaremos para confirmar fecha y hora.")
+    alert("Cita pedida con éxito, le llamaremos y le mandaremos un correo electrónico para confirmar fecha y hora.")
     document.getElementById('mandado').innerHTML='Cita pedida con éxito!';
   }
